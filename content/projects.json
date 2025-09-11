@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Sales Dashboard",
+      "description": "Interactive dashboard built with D3.js for real-time sales analytics with Excel export capabilities.",
+      "image": "assets/images/proj-1.jpg",
+      "imageWebp": "assets/images/proj-1.webp",
+      "imageAvif": "assets/images/proj-1.avif",
+      "tags": ["D3.js", "Dashboard", "Analytics", "Excel"],
+      "repoUrl": "https://github.com/username/sales-dashboard",
+      "liveUrl": "https://username.github.io/sales-dashboard",
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "title": "Task Management System",
+      "description": "Collaborative task management application with real-time updates, team assignments, and progress tracking.",
+      "image": "assets/images/proj-2.jpg",
+      "imageWebp": "assets/images/proj-2.webp",
+      "imageAvif": "assets/images/proj-2.avif",
+      "tags": ["React", "Firebase", "Real-time", "Collaboration"],
+      "repoUrl": "https://github.com/username/task-manager",
+      "liveUrl": "https://task-manager-demo.com",
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "title": "Weather Forecast App",
+      "description": "Location-based weather forecasting app with historical data visualization and severe weather alerts.",
+      "image": "assets/images/proj-3.jpg",
+      "imageWebp": "assets/images/proj-3.webp",
+      "imageAvif": "assets/images/proj-3.avif",
+      "tags": ["Vue.js", "API", "Charts", "Maps"],
+      "repoUrl": "https://github.com/username/weather-app",
+      "liveUrl": "https://weather-app-demo.com",
+      "featured": false
+    },
+    {
+      "id": "proj-4",
+      "title": "E-Learning Platform",
+      "description": "Online learning management system with video streaming, quizzes, and progress tracking for students.",
+      "image": "assets/images/proj-4.jpg",
+      "imageWebp": "assets/images/proj-4.webp",
+      "imageAvif": "assets/images/proj-4.avif",
+      "tags": ["Node.js", "MongoDB", "Video", "Education"],
+      "repoUrl": "https://github.com/username/elearning-platform",
+      "liveUrl": "https://elearning-demo.com",
+      "featured": true
+    },
+    {
+      "id": "proj-5",
+      "title": "Portfolio Website",
+      "description": "Responsive portfolio website built with accessibility and performance as primary concerns.",
+      "image": "assets/images/proj-5.jpg",
+      "imageWebp": "assets/images/proj-5.webp",
+      "imageAvif": "assets/images/proj-5.avif",
+      "tags": ["HTML", "CSS", "JavaScript", "Accessibility"],
+      "repoUrl": "https://github.com/username/portfolio",
+      "liveUrl": "https://username.github.io",
+      "featured": false
+    },
+    {
+      "id": "proj-6",
+      "title": "Mobile Banking App",
+      "description": "Secure mobile banking application with biometric authentication and real-time transaction monitoring.",
+      "image": "assets/images/proj-6.jpg",
+      "imageWebp": "assets/images/proj-6.webp",
+      "imageAvif": "assets/images/proj-6.avif",
+      "tags": ["React Native", "Security", "API", "Fintech"],
+      "repoUrl": "https://github.com/username/mobile-banking",
+      "liveUrl": "https://banking-demo.com",
+      "featured": true
+    }
+  ]
+}
