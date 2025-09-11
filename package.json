@@ -9,46 +9,16 @@
     "lint:fix": "eslint site/script.js --fix",
     "format": "prettier --write \"site/**/*.{js,css,html,json}\"",
     "format:check": "prettier --check \"site/**/*.{js,css,html,json}\"",
-    "test:a11y": "axe-core-cli site/index.html",
+    "test:a11y": "@axe-core/cli site/index.html",
     "test:performance": "lhci autorun",
     "build": "npm run lint && npm run format && npm run test:a11y",
     "predeploy": "npm run build && npm run test:performance"
   },
-  "keywords": [
-    "portfolio",
-    "accessibility",
-    "performance",
-    "static-site"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
   "devDependencies": {
-    "@lhci/cli": "^0.12.0",
-    "axe-core-cli": "^0.0.3",
-    "eslint": "^8.57.0",
-    "html-validate": "^8.7.4",
-    "prettier": "^3.2.5"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2021": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "rules": {
-      "no-unused-vars": "warn",
-      "no-console": "warn"
-    }
-  },
-  "prettier": {
-    "semi": true,
-    "trailingComma": "es5",
-    "singleQuote": true,
-    "printWidth": 100,
-    "tabWidth": 2
+    "@axe-core/cli": "^4.10.2",
+    "@lhci/cli": "^0.15.1",
+    "eslint": "^9.35.0",
+    "html-validate": "^10.0.0",
+    "prettier": "^3.6.2"
   }
 }
