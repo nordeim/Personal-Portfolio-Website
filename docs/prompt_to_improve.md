@@ -1,0 +1,1 @@
+awesome job with the planning and execution! Please review your generated `index.html` to ensure that it is complete. Also confirm that I save the `index.html` under the `/site` folder under the project root directory. And please check whether you had created the `site/styles.css` file. If not, think deeper and harder to create the `styles.css` that complements the `index.html`
