@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio — Elite Developer</title>
+    <meta name="description" content="Showcasing innovative projects and technical expertise">
+    
+    <!-- SEO & Social -->
+    <meta property="og:title" content="Portfolio — Elite Developer">
+    <meta property="og:description" content="Showcasing innovative projects and technical expertise">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Critical CSS (Above-the-fold only) -->
+    <style>
+        /* Critical design tokens */
+        :root {
+            --bg: #ffffff;
+            --text: #0b0b0b;
+            --accent: #0066ff;
+            --card: #f7f7f8;
+            --spacing-md: 16px;
+            --spacing-xl: 32px;
+            --font-system: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        }
+        
+        [data-theme="dark"] {
+            --bg: #0b0c10;
+            --text: #e6e6e6;
+            --card: #111214;
+        }
+        
+        /* Reset and base styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: var(--font-system);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Critical header and hero styles */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--card);
+            z-index: 50;
+            padding: var(--spacing-md);
+        }
+        
+        .hero {
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .cta {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: var(--spacing-md);
+        }
+        
+        /* Ensure content is visible while styles load */
+        .hidden-until-loaded { opacity: 0; }
+    </style>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preconnect" href="https://formspree.io">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Elite Developer",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://yourusername.github.io",
+        "sameAs": [
+            "https://github.com/nordeim",
+            "https://linkedin.com/in/nordeim"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main" class="skip-link sr-only">Skip to main content</a>
+    
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Portfolio</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button 
+                    id="theme-toggle" 
+                    class="theme-toggle"
+                    aria-label="Toggle dark mode"
+                    aria-pressed="false"
+                >
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main">
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Welcome to My Portfolio</h1>
+            <p>I'm a passionate developer creating innovative solutions with modern technologies. Let's build something amazing together.</p>
+            <a href="#projects" class="cta">View My Projects</a>
+        </section>
+        
+        <section id="projects" class="projects hidden-until-loaded" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading">Featured Projects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects loaded dynamically -->
+                    <div class="loading">Loading projects...</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about hidden-until-loaded" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading">About Me</h2>
+                <p>I'm a full-stack developer with expertise in modern web technologies. I specialize in creating accessible, performant applications that deliver exceptional user experiences.</p>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React & Vue.js</li>
+                            <li>Accessibility (WCAG)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact hidden-until-loaded" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading">Get In Touch</h2>
+                <p>Have a project in mind? Let's discuss how we can work together.</p>
+                
+                <form 
+                    id="contact-form" 
+                    action="https://formspree.io/f/YOUR_FORM_ID" 
+                    method="POST"
+                    novalidate
+                >
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                aria-describedby="name-error"
+                                autocomplete="name"
+                            >
+                            <span id="name-error" class="error" role="alert"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                aria-describedby="email-error"
+                                autocomplete="email"
+                            >
+                            <span id="email-error" class="error" role="alert"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject"
+                            autocomplete="off"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="5" 
+                            required
+                            aria-describedby="message-error"
+                        ></textarea>
+                        <span id="message-error" class="error" role="alert"></span>
+                    </div>
+                    
+                    <!-- Honeypot field for spam prevention -->
+                    <div class="honeypot" aria-hidden="true">
+                        <label for="gotcha">Don't fill this out if you're human</label>
+                        <input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="submit-text">Send Message</span>
+                        <span class="submit-loading" aria-hidden="true">Sending...</span>
+                    </button>
+                    
+                    <div id="form-status" role="status" aria-live="polite" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer hidden-until-loaded">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/nordeim" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="https://linkedin.com/in/nordeim" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://twitter.com/nordeim" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-content"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
