@@ -420,26 +420,42 @@
     
     // Contact Form
     const contactForm = {
-        init() {
-            this.setupValidation();
-            this.setupSubmission();
-        },
-        
-        setupValidation() {
-            const form = utils.qs('#contact-form');
-            if (!form) return;
-            
-            const inputs = utils.qsa('input[required], textarea[required]');
-            
-            inputs.forEach(input => {
-                // Real-time validation
-                input.addEventListener('blur', () => this.validateField(input));
-                input.addEventListener('input', () => this.clearError(input));
-            });
-            
-            // Form submission
-            form.addEventListener('submit', (e) => this.handleSubmit(e));
-        },
+    init() {
+        // Defensive: setupValidation must run first to attach submit handlers
+        this.setupValidation && this.setupValidation();
+
+        // Only call setupSubmission if it exists and is a function
+        if (typeof this.setupSubmission === 'function') {
+            try {
+                this.setupSubmission();
+            } catch (err) {
+                console.warn('contactForm.setupSubmission threw an error:', err);
+            }
+        } else {
+            // harmless noop - ensures older builds without setupSubmission won't crash
+            // console.debug('contactForm.setupSubmission not present; skipping.');
+        }
+    },
+
+    setupValidation() {
+        const form = document.querySelector('#contact-form');
+        if (!form) return;
+
+        const inputs = document.querySelectorAll('input[required], textarea[required]');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => this.validateField(input));
+            input.addEventListener('input', () => this.clearError(input));
+        });
+
+        form.addEventListener('submit', (e) => this.handleSubmit(e));
+    },
+
+    // If your script already has setupSubmission implemented elsewhere, keep it.
+    // Otherwise you can add a safe no-op here:
+    setupSubmission() {
+        // No-op or additional wiring if needed; present to avoid runtime errors.
+    },
         
         validateField(field) {
             const value = field.value.trim();
