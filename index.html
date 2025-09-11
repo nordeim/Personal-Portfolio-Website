@@ -13,31 +13,31 @@
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Critical CSS (Above-the-fold only) -->
-<style>
-  :root {
-    --bg: #f6f8fb;
-    --text: #0f1724;
-    --accent: #0ea5a4;
-    --accent-rgb: 14,165,164;
-    --card: #ffffff;
-    --spacing-md: 16px;
-    --spacing-xl: 32px;
-    --font-system: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  }
-  [data-theme="dark"] {
-    --bg: #071027;
-    --text: #e6f6f5;
-    --card: #0b1b2b;
-    --accent: #2dd4bf;
-    --accent-rgb: 45,212,191;
-  }
-  * { box-sizing: border-box; margin:0; padding:0; }
-  body { font-family: var(--font-system); background: var(--bg); color: var(--text); line-height:1.6; }
-  header { position: sticky; top:0; background: var(--bg); border-bottom: 1px solid var(--card); padding: var(--spacing-md); z-index:50; }
-  .hero { padding: var(--spacing-xl) var(--spacing-md); text-align:center; min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
-  .cta { display:inline-block; background: var(--accent); color: white; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:600; margin-top:var(--spacing-md); }
-  .hidden-until-loaded { opacity:0; }
-</style>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --text: #0f1724;
+        --accent: #0ea5a4;
+        --accent-rgb: 14,165,164;
+        --card: #ffffff;
+        --spacing-md: 16px;
+        --spacing-xl: 32px;
+        --font-system: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      [data-theme="dark"] {
+        --bg: #071027;
+        --text: #e6f6f5;
+        --card: #0b1b2b;
+        --accent: #2dd4bf;
+        --accent-rgb: 45,212,191;
+      }
+      * { box-sizing: border-box; margin:0; padding:0; }
+      body { font-family: var(--font-system); background: var(--bg); color: var(--text); line-height:1.6; }
+      header { position: sticky; top:0; background: var(--bg); border-bottom: 1px solid var(--card); padding: var(--spacing-md); z-index:50; }
+      .hero { padding: var(--spacing-xl) var(--spacing-md); text-align:center; min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
+      .cta { display:inline-block; background: var(--accent); color: white; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:600; margin-top:var(--spacing-md); }
+      .hidden-until-loaded { opacity:0; }
+    </style>
     
     <!-- Preload critical resources -->
     <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
