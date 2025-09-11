@@ -1,8 +1,5 @@
 # PRD.md
 
-Version: 1.0 — Date: 2025-09-10 — Author: AI Agent
-Assumptions:
-
 * Host: GitHub Pages (static hosting only).
 * No backend allowed; contact form will use a forms-as-a-service provider (e.g., Formspree).
 * Accessibility target: WCAG 2.1 Level AA.
@@ -10,9 +7,9 @@ Assumptions:
 
 ---
 
-## How I researched this
+## How you researched this
 
-I prioritized standards and up-to-date, authoritative sources for accessibility, performance, static hosting, and form handling. Main references: W3C WCAG guidance, Google / web.dev performance guidance (Core Web Vitals), GitHub Pages docs, Formspree docs for static-site form handling, and MDN for color-scheme / dark-mode best practices. Key claims below cite those sources. ([W3C][1], [web.dev][2], [GitHub Docs][3], [Formspree][4], [MDN Web Docs][5])
+You will prioritize standards and up-to-date, authoritative sources for accessibility, performance, static hosting, and form handling. Main references: W3C WCAG guidance, Google / web.dev performance guidance (Core Web Vitals), GitHub Pages docs, Formspree docs for static-site form handling, and MDN for color-scheme / dark-mode best practices. Key claims below cite those sources. ([W3C][1], [web.dev][2], [GitHub Docs][3], [Formspree][4], [MDN Web Docs][5])
 
 ---
 
@@ -279,16 +276,13 @@ Each DoD item must be verified before marking done.
 
 # ExecutionPlan.md
 
-Version: 1.0 — Date: 2025-09-10 — Author: AI Agent
-Assumptions:
-
 * Host: GitHub Pages (push to `gh-pages` or use pages action). ([GitHub Docs][3])
 * Contact form will use Formspree (developer will supply form ID later). ([Formspree][4])
 * WCAG 2.1 AA is target standard. ([W3C][1])
 
 ---
 
-## How I researched this
+## How you will research this
 
 Plan and tooling choices were informed by official hosting docs (GitHub Pages), accessibility guidance (WCAG), performance guidance (web.dev Core Web Vitals), and static-site form provider docs (Formspree). Commands and automation steps are typical patterns for static sites and accessibility/performance tooling. ([GitHub Docs][3], [W3C][1], [web.dev][2], [Formspree][4])
 
@@ -694,20 +688,4 @@ Remaining assumptions to resolve if you want exact deploy:
 * AVIF / WebP guidance for modern images. ([RUMvision \[Real User Monitoring\]][7])
 * axe-core CLI (accessibility automation). ([npm][8])
 
----
 
-If you want, I can now:
-
-* generate the initial repository structure and files (Phase 0–3) here (I will produce full `index.html`, `styles.css`, `script.js`, and a `projects.json` sample), or
-* proceed to implement Phase 4 CI and a GitHub Actions workflow ready to deploy to GitHub Pages.
-
-Which do you want me to execute next?
-
-[1]: https://www.w3.org/TR/WCAG21/?utm_source=chatgpt.com "Web Content Accessibility Guidelines (WCAG) 2.1"
-[2]: https://web.dev/articles/lcp?utm_source=chatgpt.com "Largest Contentful Paint (LCP) | Articles"
-[3]: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages?utm_source=chatgpt.com "What is GitHub Pages?"
-[4]: https://formspree.io/?utm_source=chatgpt.com "Custom Forms with No Server Code | Formspree | Formspree"
-[5]: https://developer.mozilla.org/en-US/docs/Web/CSS/%40media/prefers-color-scheme?utm_source=chatgpt.com "prefers-color-scheme - CSS | MDN - Mozilla"
-[6]: https://docs.netlify.com/manage/forms/setup/?utm_source=chatgpt.com "Forms setup | Netlify Docs"
-[7]: https://www.rumvision.com/blog/modern-image-formats-webp-avif-browser-support/?utm_source=chatgpt.com "Modern Image Formats: WebP vs AVIF and its browser ..."
-[8]: https://www.npmjs.com/package/%40axe-core/cli?utm_source=chatgpt.com "axe-core/cli"
