@@ -55,8 +55,8 @@ portfolio/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+git clone https://github.com/nordeim/Personal-Portfolio-Website.git
+cd Personal-Portfolio-Website
 ```
 
 2. Install dependencies:
